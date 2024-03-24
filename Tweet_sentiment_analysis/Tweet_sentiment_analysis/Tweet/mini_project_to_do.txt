@@ -1,0 +1,11 @@
+title - times new roman (24-32)
+abstract
+introduction
+problem statement 
+workflow
+literature survey(paper refered)
+proposed solution
+conclusion
+
+Abstract:
+	Here

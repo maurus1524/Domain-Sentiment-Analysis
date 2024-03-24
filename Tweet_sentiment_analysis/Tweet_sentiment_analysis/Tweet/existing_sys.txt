@@ -1,0 +1,36 @@
+The present work on sentiment analysis can be categorised from a variety of 
+angles, including the method employed, the perspective on the text, the 
+amount of text analysis detail, the rating level, etc.
+We identified machine learning, lexicon-based, statistical, and rule-based 
+techniques from a technological perspective.
+By training on a known dataset, the machine learning method employs different
+learning algorithms to ascertain the sentiment. The lexicon-based method 
+involves determining a review's emotion polarity based on the semantic 
+orientation of its words or sentences. A text's subjectivity and viewpoint 
+are measured by its "semantic orientation."
+The rule-based technique scans a document for opinion words before 
+classifying it according to the proportion of positive and negative words.
+It takes into account a variety of classification criteria, including 
+dictionary polarity, negation and boosting words, idioms, emoticons, and 
+mixed viewpoints, among others.
+Each review is represented by statistical models as a combination of 
+latent features and ratings.
+In order to cluster head words into aspects and sentiments into ratings, 
+it is believed that aspects and their ratings can be represented by 
+multinomial distributions. Another categorization is focused primarily 
+on the organisation of the text: classification at the document, phrase, 
+or word level. Sentence- or word-level classification can express a 
+sentiment polarity for each sentence in a review or even for each word, as 
+opposed to document-level classification, which seeks to identify a 
+sentiment polarity for the entire review. According to our research, the 
+majority of approaches concentrate on the document-level.
+Additionally, we may distinguish between techniques that aim to score a 
+review globally versus techniques that gauge the strength of sentiment for 
+various parts of a product. Most approaches to global review classification
+ that depend on machine learning simply take into account the polarity of 
+the review (positive/negative) into account. More linguistic variables, 
+such as intensification, negation, modality, and discourse structure, are 
+used in solutions that aim for a more precise classification of reviews 
+(such as three or five star ratings). A thorough classification 
+of existing approaches is shown in Figure 1. This grouping is not 
+exhaustive. One solution can be used in multiple categories.

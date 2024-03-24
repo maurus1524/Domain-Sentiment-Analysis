@@ -1,0 +1,219 @@
+Hello sir this is maurus maria rubenson.
+
+Our topic is Twitter sentiment analysis.
+We will be using gensim model and cnn to 
+classify the polarity of the tweets.
+
+abstract
+
+Main aim is find the polarity of a particular
+domain or using the current world knowledge using
+twitter. For accuracy we will 
+create a vocab using the W2R (word to vector) model 
+containing all the related words. The words are 
+vectorized with the relationship among them. This makes 
+the prediction easier. Then through implementation of CNN 
+(conventional neural network) we insert the embedding 
+layer which is formed with vectorized words and a LSTM 
+(long-short-term-memory) layer. The accuracy value of the 
+model is created and we can analyze the tweets of the 
+particular domain. The Dataset for each text will be 
+chosen separately by using Entity Identification. 
+
+Introduction
+
+Twitter is a free data collection site where people 
+update about their status in their social networking
+platforms. Twitter is a service for social networking 
+including friends, family, coworkers to communicate and 
+keep others updated their status.
+The major challenges such as Domain Dependency, World 
+Knowledge and Pragmatics can be handled through selection 
+of major entities and obtaining data related to it
+
+Existing system
+
+Present Types of sentiment analysis
+1. Rule or Lexion based approach
+- (how it works): It counts number of positive or negative 
+values in denote their polarity and 
+sentiment to calculate the score.
+- (Disadvantages): 
+* It does not care about combination of words
+* quick but need constant maintence
+2. Automated or Machine Learning approach
+- Traditional Models:: gathering of a dataset with examples 
+for positive, negative, and neutral 
+classes, processing data finally training the algorithm
+- Deep Learning Models:: 
+* Naive Bayes sentiment analysis
+* Deep Learning:
+# Sentiment analysis using NLP deep learning are able to 
+learn patterns through multiple layers 
+from unstructured and unlabeled data to perform sentiment 
+analysis
+3. Hybrid approach
+4. Named Entity based Sentiment Analyzer
+- Sentiment Analysis based on top named entities
+- Targetted by finding sentences containing the named 
+entities and performing sentiment analysis 
+only on those sentences one by one
+
+we have so many unwanted data present in the json file
+obtained. We will remove the values which are not needed
+such as links and non relavant repeating values and stop
+words from the text. we will use the polarity of the 
+hashtag and the values
+
+Processing
+NLTK is one of the most used open source platforms for 
+programming with natural language data. The top of the 
+website features “some simple things you can do with NLTK” 
+with pretty short code to get you started. And there are a 
+number of other places to find production-ready APIs to 
+help you set up tools, like stemming and lemmatization, 
+sentiment analysis, and named entity recognition.
+
+SpaCy is an improvement on NLTK that is extremely fast and 
+can handle huge amounts of data. It has become the open 
+source tool of choice for professional-grade NLP. 
+It’s great for simple keyword 
+extraction, building whole natural language understanding 
+systems, or prepping text for deep learning.
+
+TextBlob Built on NLTK and Pattern, TextBlob offers APIs 
+for a 
+multitude of NLP tasks dude to its clean, faster user 
+friendly interface we will use textblob for initial label
+of the data
+
+Stanford CoreNLP is written in Java but has Python 
+wrappers. They offer a CoreNLP API to get full 
+performance and a Simple API “for users who do not need a
+lot of customization.” CoreNLP works in seven human 
+languages, so it can be great for language research, 
+machine translation, and news analysis.
+
+After seeing each process we are left with gensim models
+
+In gensim models Developers that primarily want to 
+perform document 
+comparison NLP tasks. Gensim is particularly specialized 
+to topic modeling, document indexing, and similarity 
+retrieval, which is required for choosing specific domain.
+It does, perform very fast in Python thanks to 
+its use of incremental online algorithms, data streaming,
+and low-level BLAS libraries. Gensim is mostly used for
+document research–searching for similarities within 
+hundreds of thousands of documents–and is common in
+medicine, insurance, patent research, and fraud detection.
+
+
+Word2Vec Model
+
+Word Embeddings
+
+Word embeddings are words that have been translated into 
+real number vectors in a way that preserves their 
+semantic meaning. To obtain the word techniques we use 
+bag of words and term frequency inverse document 
+frequency instead, they treat each word separately as a 
+feature. This model considers the words around a given 
+word inside a specific window size when training it. The 
+term "embedding vectors" can be derived in a variety of 
+ways. One such approach is Word2vec, which makes use of a 
+neural embeddings model to learn that.
+
+Continuous Bag of Words
+
+In this the model gets the words under various parameters 
+and constraints with the given content of words of a 
+specific boundary or window. There are a number of 
+dimensions in the hidden layer in which the output layer 
+represents the current word. This makes us and gives us 
+the content of the words and to proceed to the next 
+process.
+
+Skip-Gram
+
+The skip-gram is direct from the Continuous Bag of Words. 
+In this method we will predict embeddings of the window 
+of the world bag created when we give a certain word to 
+the model. The input layer will have the current word and 
+the output for that in skip-gram will be list of similar 
+words.
+
+Word2Vec Vectors
+		
+By traversing through the dataset at each iteration the 
+Word2Vec will be generated which will be later used. We 
+can get the embedding layer through the embedding matrix 
+from the training dataset by simply using the gensim model. We will be applying the mean values of words in the tweets which are in the form of sentences.
+
+CNN is has three layers
+
+Convolutional layer. The majority of computations happen 
+in the convolutional layer, which is the core building 
+block of a CNN. A second convolutional layer can follow 
+the initial convolutional layer.Over multiple iterations, 
+the kernel sweeps over the entire vector. After each 
+iteration a dot product is calculated between the input 
+values. The final output from the series of dots is known 
+as a feature map or convolved feature. Ultimately, the 
+image is converted into numerical values in this layer, 
+which allows the CNN to interpret the image and extract 
+relevant patterns from it.
+
+Pooling layer. Like the convolutional layer, the pooling 
+layer also sweeps a kernel or filter across the input 
+image. But unlike the convolutional layer, the pooling 
+layer reduces the number of parameters in the input and 
+also results in some information loss. On the positive 
+side, this layer reduces complexity and improves the 
+efficiency of the CNN.
+
+Fully connected layer. The FC layer is where polarity
+classification happens in the CNN based on the features 
+extracted in the previous layers. Here, fully connected 
+means that all the inputs or nodes from one layer are 
+connected to every activation unit or node of the next 
+layer.
+
+LSTM in CNN:
+
+With the recent breakthroughs that have been happening in 
+data science, it is found that for almost all of these 
+sequence prediction problems, Long short Term Memory 
+networks, a.k.a LSTMs have been observed as the most 
+effective solution.
+LSTMs on the other hand, make small modifications to the 
+information by multiplications and additions. With LSTMs,
+the information flows through a mechanism known as cell 
+states
+LSTMs have an edge over conventional feed-forward neural 
+networks and RNN in many ways. This is because of their 
+property of selectively remembering patterns for long 
+durations of time. 
+
+
+Conclusion
+
+We have applied a specific way to collect data from the 
+twitter database so that it helps us overcome the domain 
+specific limitations and implement one of the major 
+concepts which is applying world knowledge to the Natural 
+Language Processing techniques
+Here we have compared all the present methods choosed the
+optimum algorithm which helps us give the polarity of 
+particular domain and world knowledge 
+With use of twitter as a Database we can explore various 
+clusters of data and we can do proper collection of data 
+and remove the other domain texts at the collection 
+process itself. This process can be improved with having 
+more advanced access to data in the twitter developer 
+options. The speed of collection may help us build models 
+of each domain separately and using hierarchical methods 
+we can classify the polarities of tweets of specific 
+domains
+
+
